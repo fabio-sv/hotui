@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  svelte-icons-pack:
+    specifier: ^2.1.0
+    version: 2.1.0
   tailwind-merge:
     specifier: ^1.13.2
     version: 1.13.2
@@ -2310,6 +2313,10 @@ packages:
     dependencies:
       svelte: 4.0.5
     dev: true
+
+  /svelte-icons-pack@2.1.0:
+    resolution: {integrity: sha512-6Il0vWi/6MW3wXSorZhCqhkJGH4Pcg1WTcdlfFMPXfJqafZVQgmKdhVFS1c2hXGvs4byttpLC9XmI3okV1uMWA==}
+    dev: false
 
   /svelte-preprocess@5.0.4(postcss@8.4.25)(svelte@4.0.5)(typescript@5.1.6):
     resolution: {integrity: sha512-ABia2QegosxOGsVlsSBJvoWeXy1wUKSfF7SWJdTjLAbx/Y3SrVevvvbFNQqrSJw89+lNSsM58SipmZJ5SRi5iw==}

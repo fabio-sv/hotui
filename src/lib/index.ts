@@ -1,1 +1,2 @@
-export { default as Button } from './Button/Button.svelte';
+export * from './components';
+export * from './stores';
