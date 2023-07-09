@@ -14,9 +14,11 @@ const theme = writable<Theme>({
 	variant: 'purple'
 });
 
-const themeify = (className: string, variant: Variant, mode: Mode) => {
+type ClassNameType = string | null | undefined | 0 | false
+
+const themeify = (variant: Variant, mode: Mode, ...classNames: ClassNameType[] ) => {
 	return twMerge(
-		className,
+		...classNames,
 		variant === 'blue' && 'bg-blue-100 hover:bg-blue-200 text-blue-700',
 		variant === 'red' && 'bg-red-100 hover:bg-red-200 text-red-700',
 		variant === 'orange' && ' bg-orange-100 hover:bg-orange-200 text-orange-700',

@@ -4,18 +4,18 @@
 	import { theme } from '$lib/stores/theme';
 </script>
 
-<main class="h-screen overflow-none flex w-full">
+<main class="h-screen overflow-none flex w-full px-40 bg-light">
 	<aside class="h-full w-fit border-r-2 px-4 py-8">
 		<a href="/components/buttons" class="text-base font-medium underline">Button</a>
 		<a href="/components/accordions" class="text-base font-medium underline">Accordion</a>
 		<a href="/components/toggles" class="text-base font-medium underline">Toggle</a>
 	</aside>
 
-	<section class="w-full p-16 flex flex-col from-fuchsia-500 to-purple-600 bg-gradient-to-r">
+	<section class="w-full p-16 flex flex-col">
 		<slot />
 	</section>
 
-	<aside class="flex flex-col w-80 h-full bg-white border-l-2 p-4">
+	<aside class="flex flex-col w-96 h-full border-l-2 p-4">
 		<h4 class="text-2xl pt-4">Theme</h4>
 
 		<label for="theme">
