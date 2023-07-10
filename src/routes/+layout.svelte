@@ -11,7 +11,7 @@
 		<a href="/components/toggles" class="text-base font-medium underline">Toggle</a>
 	</aside>
 
-	<section class="w-full p-16 flex flex-col">
+	<section class="w-full p-16 flex flex-col" class:bg-gray-700={$theme.mode === 'dark'}>
 		<slot />
 	</section>
 

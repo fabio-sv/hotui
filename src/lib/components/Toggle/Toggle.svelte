@@ -15,8 +15,14 @@
 		$theme.variant === 'pink' && 'bg-pink-700',
 		selected ? 'bg-opacity-60' : 'bg-opacity-30'
 	);
+
+	$: ballClass = twMerge(
+		'transition-all rounded-full h-5 w-5 bg-white',
+		$theme.mode === 'dark' && 'bg-gray-800',
+		selected && 'translate-x-7'
+	);
 </script>
 
 <button class={toggleClass} on:click={() => (selected = !selected)}>
-	<div class="transition-all rounded-full h-5 w-5 bg-white" class:translate-x-7={selected} />
+	<div class={ballClass} />
 </button>

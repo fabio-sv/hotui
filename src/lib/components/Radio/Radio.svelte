@@ -11,13 +11,20 @@
 
 	$: className = twMerge(
 		'transition-all flex justify-between items-center w-full text-left p-4 font-medium rounded-md shadow-md bg-white',
-		$theme.variant === 'blue' && "[&:has(input[type='radio']:checked)]:bg-blue-700/30",
-		$theme.variant === 'red' && "[&:has(input[type='radio']:checked)]:bg-red-700/30",
-		$theme.variant === 'orange' && "[&:has(input[type='radio']:checked)]:bg-orange-700/30",
-		$theme.variant === 'green' && "[&:has(input[type='radio']:checked)]:bg-green-700/30",
-		$theme.variant === 'yellow' && "[&:has(input[type='radio']:checked)]:bg-yellow-700/30",
-		$theme.variant === 'purple' && "[&:has(input[type='radio']:checked)]:bg-purple-700/30",
-		$theme.variant === 'pink' && "[&:has(input[type='radio']:checked)]:bg-pink-700/30"
+		$theme.variant === 'blue' &&
+			"[&:has(input[type='radio']:checked)]:bg-blue-200 [&:has(input[type='radio']:checked)]:text-blue-600",
+		$theme.variant === 'red' &&
+			"[&:has(input[type='radio']:checked)]:bg-red-200 [&:has(input[type='radio']:checked)]:text-red-600",
+		$theme.variant === 'orange' &&
+			"[&:has(input[type='radio']:checked)]:bg-orange-200 [&:has(input[type='radio']:checked)]:text-orange-600",
+		$theme.variant === 'green' &&
+			"[&:has(input[type='radio']:checked)]:bg-green-200 [&:has(input[type='radio']:checked)]:text-green-600",
+		$theme.variant === 'yellow' &&
+			"[&:has(input[type='radio']:checked)]:bg-yellow-100 [&:has(input[type='radio']:checked)]:text-yellow-700",
+		$theme.variant === 'purple' &&
+			"[&:has(input[type='radio']:checked)]:bg-purple-200 [&:has(input[type='radio']:checked)]:text-purple-600",
+		$theme.variant === 'pink' &&
+			"[&:has(input[type='radio']:checked)]:bg-pink-200 [&:has(input[type='radio']:checked)]:text-pink-600"
 	);
 
 	$: tickClass = twMerge(

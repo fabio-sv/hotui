@@ -6,6 +6,9 @@
 	import TabItem from '$lib/components/TabItem/TabItem.svelte';
 	import Tabs from '$lib/components/Tabs/Tabs.svelte';
 	import Toggle from '$lib/components/Toggle/Toggle.svelte';
+	import Icon from 'svelte-icons-pack/Icon.svelte';
+	import IconSvelte from 'svelte-icons-pack/si/SiSvelte';
+	import IconTailwind from 'svelte-icons-pack/si/SiTailwindcss';
 
 	let radioValue: string = 'opt1';
 </script>
@@ -51,7 +54,7 @@
 
 <form class="space-y-2">
 	<Radio name="options" value="opt1" bind:group={radioValue} let:selected>
-		<div class:text-white={selected}>
+		<div>
 			<p class="text-base">Startup</p>
 			<p class="text-sm font-normal text-gray-500" class:text-gray-100={selected}>
 				12GB/6 CPUs - 160 GB SSD Disk
@@ -59,7 +62,7 @@
 		</div>
 	</Radio>
 	<Radio name="options" value="opt2" bind:group={radioValue} let:selected>
-		<div class:text-white={selected}>
+		<div>
 			<p class="text-base">Business</p>
 			<p class="text-sm font-normal text-gray-500" class:text-gray-100={selected}>
 				16GB/8 CPUs - 512 GB SSD Disk
@@ -69,21 +72,37 @@
 </form>
 
 <Tabs>
-	<TabItem>
-		<p slot="trigger">First</p>
+	<TabItem open>
+		<p slot="trigger">Recent</p>
 
-		<p>Content 1</p>
+		<div class="p-4 hover:bg-gray-100 rounded-md">
+			<p class="font-medium text-sm">Does drinking coffee make you smarter?</p>
+			<p class="text-xs text-gray-700">5h ago . 5 comments . 2 shares</p>
+		</div>
+
+		<div class="p-4 hover:bg-gray-100 rounded-md">
+			<p class="font-medium text-sm">So you've bought coffee... now what?</p>
+			<p class="text-xs text-gray-700">5h ago . 5 comments . 2 shares</p>
+		</div>
 	</TabItem>
 
 	<TabItem>
 		<p slot="trigger">Second</p>
 
-		<p>Content 2</p>
+		<p
+			class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600 text-center text-3xl font-bold leading-loose"
+		>
+			Whatever you want goes here!
+		</p>
 	</TabItem>
 
 	<TabItem>
 		<p slot="trigger">Third</p>
 
-		<p>Content 3</p>
+		<div class="flex gap-x-4 justify-center items-center text-2xl">
+			<Icon src={IconSvelte} title="Svelte" color="#ff3e00" size="3rem" />
+			<p>+</p>
+			<Icon src={IconTailwind} title="Tailwind" color="#38bdf8" size="3rem" />
+		</div>
 	</TabItem>
 </Tabs>
