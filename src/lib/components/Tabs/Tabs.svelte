@@ -31,14 +31,13 @@
 	}
 
 	$: ulClass = twMerge(
-		'flex w-full gap-x-1 bg-purple-100 rounded-lg p-1 shadow-md',
-		$theme.variant === 'blue' && 'bg-blue-100',
-		$theme.variant === 'green' && 'bg-green-100',
-		$theme.variant === 'orange' && 'bg-orange-100',
-		$theme.variant === 'pink' && 'bg-pink-100',
-		$theme.variant === 'purple' && 'bg-purple-100',
-		$theme.variant === 'red' && 'bg-red-100',
-		$theme.variant === 'yellow' && 'bg-yellow-100'
+		'flex w-full gap-x-1 bg-white text-black rounded-lg p-1 shadow-md',
+		$theme.mode === 'dark' && 'bg-gray-800 text-white'
+	);
+
+	$: contentClass = twMerge(
+		'mt-2 rounded-lg p-4 shadow-md bg-white text-black',
+		$theme.mode === 'dark' && 'bg-gray-800 text-white'
 	);
 </script>
 
@@ -47,10 +46,5 @@
 		<slot />
 	</ul>
 
-	<div
-		role="tabpanel"
-		aria-labelledby="id-tab"
-		class="mt-2 rounded-lg p-4 shadow-md bg-white"
-		use:init
-	/>
+	<div role="tabpanel" aria-labelledby="id-tab" class={contentClass} use:init />
 </section>

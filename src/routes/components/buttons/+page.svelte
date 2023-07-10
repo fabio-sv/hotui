@@ -56,17 +56,13 @@
 	<Radio name="options" value="opt1" bind:group={radioValue} let:selected>
 		<div>
 			<p class="text-base">Startup</p>
-			<p class="text-sm font-normal text-gray-500" class:text-gray-100={selected}>
-				12GB/6 CPUs - 160 GB SSD Disk
-			</p>
+			<p class="text-sm font-normal">12GB/6 CPUs - 160 GB SSD Disk</p>
 		</div>
 	</Radio>
 	<Radio name="options" value="opt2" bind:group={radioValue} let:selected>
 		<div>
 			<p class="text-base">Business</p>
-			<p class="text-sm font-normal text-gray-500" class:text-gray-100={selected}>
-				16GB/8 CPUs - 512 GB SSD Disk
-			</p>
+			<p class="text-sm font-normal">16GB/8 CPUs - 512 GB SSD Disk</p>
 		</div>
 	</Radio>
 </form>
@@ -75,14 +71,14 @@
 	<TabItem open>
 		<p slot="trigger">Recent</p>
 
-		<div class="p-4 hover:bg-gray-100 rounded-md">
+		<div class="p-4 hover:bg-gray-100/40 rounded-md">
 			<p class="font-medium text-sm">Does drinking coffee make you smarter?</p>
-			<p class="text-xs text-gray-700">5h ago . 5 comments . 2 shares</p>
+			<p class="text-xs opacity-50">5h ago . 5 comments . 2 shares</p>
 		</div>
 
-		<div class="p-4 hover:bg-gray-100 rounded-md">
+		<div class="p-4 hover:bg-gray-100/40 rounded-md">
 			<p class="font-medium text-sm">So you've bought coffee... now what?</p>
-			<p class="text-xs text-gray-700">5h ago . 5 comments . 2 shares</p>
+			<p class="text-xs opacity-50">5h ago . 5 comments . 2 shares</p>
 		</div>
 	</TabItem>
 
@@ -90,7 +86,7 @@
 		<p slot="trigger">Second</p>
 
 		<p
-			class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600 text-center text-3xl font-bold leading-loose"
+			class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600 text-center text-3xl font-bold leading-loose drop-shadow-md"
 		>
 			Whatever you want goes here!
 		</p>

@@ -22,16 +22,22 @@
 	}
 
 	$: buttonClass = twMerge(
-		'transition-all w-full text-center p-2 font-medium rounded-md',
-		open && 'bg-white shadow-md',
-		!open && 'hover:bg-white/40',
-		$theme.variant === 'blue' && 'text-blue-600',
-		$theme.variant === 'green' && 'text-green-600',
-		$theme.variant === 'orange' && 'text-orange-600',
-		$theme.variant === 'pink' && 'text-pink-600',
-		$theme.variant === 'purple' && 'text-purple-600',
-		$theme.variant === 'red' && 'text-red-600',
-		$theme.variant === 'yellow' && 'text-yellow-600'
+		'transition-all w-full text-center p-2 font-medium rounded-md text-black',
+		$theme.mode === 'dark' && 'text-white',
+		!open && $theme.variant === 'blue' && 'hover:bg-blue-100 hover:text-blue-700',
+		!open && $theme.variant === 'red' && 'hover:bg-red-100 hover:text-red-700',
+		!open && $theme.variant === 'orange' && 'hover:bg-orange-100 hover:text-orange-700',
+		!open && $theme.variant === 'green' && 'hover:bg-green-100 hover:text-green-700',
+		!open && $theme.variant === 'yellow' && 'hover:bg-yellow-100 hover:text-yellow-700',
+		!open && $theme.variant === 'purple' && 'hover:bg-purple-100 hover:text-purple-700',
+		!open && $theme.variant === 'pink' && 'hover:bg-pink-100 hover:text-pink-700',
+		open && $theme.variant === 'blue' && 'hover:bg-blue-100 text-blue-700',
+		open && $theme.variant === 'red' && 'hover:bg-red-100 text-red-700',
+		open && $theme.variant === 'orange' && ' bg-orange-200 text-orange-700',
+		open && $theme.variant === 'green' && 'bg-green-200 text-green-700',
+		open && $theme.variant === 'yellow' && 'bg-yellow-200 text-yellow-700',
+		open && $theme.variant === 'purple' && 'bg-purple-200 text-purple-700',
+		open && $theme.variant === 'pink' && 'bg-pink-200 text-pink-700'
 	);
 </script>
 

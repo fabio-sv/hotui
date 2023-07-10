@@ -10,7 +10,8 @@
 	export let group: string;
 
 	$: className = twMerge(
-		'transition-all flex justify-between items-center w-full text-left p-4 font-medium rounded-md shadow-md bg-white',
+		'transition-all flex justify-between items-center w-full text-left p-4 font-medium rounded-md shadow-md bg-white text-black cursor-pointer',
+		$theme.mode === 'dark' && 'bg-gray-800 text-white',
 		$theme.variant === 'blue' &&
 			"[&:has(input[type='radio']:checked)]:bg-blue-200 [&:has(input[type='radio']:checked)]:text-blue-600",
 		$theme.variant === 'red' &&
