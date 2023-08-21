@@ -4,6 +4,6 @@
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
 	"tailwindCSS.experimental.classRegex": [
-    "twMerge([^`]*)",
+    "twMerge\\(\\s*['\"]([^'\"]*)['\"]\\s*", // only works for first string passed into twMerge func
  ],
 }

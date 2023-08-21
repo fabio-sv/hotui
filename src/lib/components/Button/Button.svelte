@@ -10,7 +10,7 @@
 	$: buttonClass = themeify(
 		$theme.variant,
 		$theme.mode,
-		'transition-all inline-flex justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium outline-none shadow-md',
+		'transition-all inline-flex justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium outline-none shadow-md font-semibold text-base',
 		!grow && 'w-fit'
 	);
 </script>

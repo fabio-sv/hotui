@@ -8,7 +8,9 @@ export default {
 				'95': '95%'
 			},
 			colors: {
-				light: '#FAFAFA'
+				light: '#FAFAFA',
+				svelte: '#ff3e00',
+				tailwind: '#38bdf8'
 			}
 		}
 	},
